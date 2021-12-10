@@ -6,7 +6,7 @@ import SvgPlayerRepeat from 'Svgs/player-repeat.svg';
 import SvgPlayerSetBackward from 'Svgs/player-set-backward.svg';
 import SvgPlayerSetForward from 'Svgs/player-set-forward.svg';
 import SvgPlayerShuffle from 'Svgs/player-shuffle.svg';
-import VolumeSlider from "./volumeSlider";
+import VolumeSlider from "./VolumeSlider";
 import TrackSlider from "./TrackSlider";
 
 declare global {
