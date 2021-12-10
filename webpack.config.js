@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   target: "web",
   cache: false,
   entry: path.join(__dirname, "src", "index.tsx"),
   devtool: 'source-map',
   output: {
       path: path.resolve(__dirname, "dist"),
+      publicPath: '/',
       filename: "index.js"
   },
   resolve: {
