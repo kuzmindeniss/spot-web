@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "allowSyntheticDefaultImports": true,
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": false,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+        "src/*": ["./src/*"],
+        "Svgs/*": ["./src/assets/svgs/*"],
+        "Rdx/*": ["./src/rdx/*"],
+        "Utils/*": ["./src/utils/*"],
+        "Hooks/*": ["./src/hooks/*"],
+        "Providers/*": ["./src/providers/*"]
+      }
+    }
+  }

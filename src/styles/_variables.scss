@@ -1,0 +1,32 @@
+$color-hover: #5C74E9;
+$xsmall-width: 520px;
+$small-width: 576px;
+$md-width: 790px;
+$large-width: 992px;
+
+$track-slider-animation-duration: 0.1s;
+$volume-track-slider-animation-duration: 0.1s;
+
+@mixin xsm {
+    @media ( max-width: ($xsmall-width - 0.02px) ) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media ( max-width: ($small-width - 0.02px) ) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media ( max-width: ($md-width - 0.02px) ) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media ( max-width: ($large-width - 0.02px) ) {
+        @content;
+    }
+}

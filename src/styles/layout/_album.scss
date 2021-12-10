@@ -1,0 +1,42 @@
+.album-header {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.album-header__left {
+    flex-grow: .2;
+    max-width: 400px;
+    min-width: 250px;
+    margin-right: 24px;
+
+    @include md {
+        align-self: center;
+    }
+}
+
+
+.album-header__right-name {
+    font-size: 96px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include md {
+        font-size: 50px;
+    }
+}
+
+.album-header__right-artist {
+    font-size: 14px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        transition: all .2s ease;
+
+        &:hover {
+            text-decoration: underline;
+            color: #ccc;
+        }
+    }
+}

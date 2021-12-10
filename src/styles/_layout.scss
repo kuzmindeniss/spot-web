@@ -1,0 +1,67 @@
+@import "layout/aside";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/trending-section";
+@import "layout/tracks-selection";
+@import "layout/tracks-table";
+@import "layout/album";
+
+.site-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.basic-container {
+  display: flex;
+  justify-content: stretch;
+  height: 100%;
+}
+
+.basic-part {
+  position: relative;
+  flex-grow: 1;
+  margin-bottom: 85px;
+  padding-bottom: 60px;
+}
+
+.site-main {
+  color: #fff;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.site-main--login-request {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  a {
+    color: inherit;
+  }
+}
+
+.basic-part {
+  background: linear-gradient(224.21deg, #18181A 2.17%, rgba(24, 24, 26, 0.81) 47.72%,
+      #18181A 91.61%), url(../assets/imgs/bg.jpg), bottom left, center, no-repeat;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #444;
+    box-shadow: 0 0 1px 1px #111, inset 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #3e3e3e, #111, #000);
+    box-shadow: inset 0 0 1px 1px #646464;
+  }
+}

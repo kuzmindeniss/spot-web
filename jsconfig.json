@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "target": "esnext",
+        "jsx": "react",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "paths": {
+            "src/*": ["./src/*"],
+            "Svgs/*": ["./src/assets/svgs/*"],
+            "Rdx/*": ["./src/rdx/*"],
+            "Utils/*": ["./src/utils/*"],
+            "Hooks/*": ["./src/hooks/*"],
+            "Providers/*": ["./src/providers/*"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}

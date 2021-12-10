@@ -1,0 +1,223 @@
+.footer-site {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    height: 85px;
+    background-color: #282828;
+    padding: 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    flex: 0.3;
+
+    @include xsm {
+        flex: 0.45;
+    }
+}
+
+.footer-albumlogo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.footer-songinfo__name {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+
+    @include sm {
+        font-size: 12px;
+    }
+}
+
+.footer-songinfo__artist {
+    font-size: 11px;
+
+    @include sm {
+        font-size: 10px;
+    }
+}
+
+
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0.4;
+
+    @include md {
+        flex: 0.3;
+    }
+
+    @include xsm {
+        flex: 0.2;
+    }
+}
+
+.footer-center-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px;
+    color: rgb(224, 224, 224);
+
+    @include md {
+        padding: 0;
+    }
+}
+
+.footer-center-icon {
+    background: none;
+    border: none;
+
+    svg {
+        
+        transition: all .2s ease-in-out;
+    }
+}
+
+.footer-center-icon svg {
+    width: 22px;
+    color: #555;
+    
+    @include md {
+        width: 16px;
+    }
+}
+
+
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0.3;
+
+    @include sm {
+        flex: 0.2;
+    }
+}
+
+.footer-slider {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    padding-top: 20px;
+    cursor: pointer;
+    user-select: none;
+
+    
+    &:hover {
+        .footer-slider__icon {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-slider__strip {
+    height: 2px;
+    border-radius: 2px;
+    background: #555;
+    position: relative;
+}
+
+.footer-slider__strip-full {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: $color-hover;
+    transition: width $volume-track-slider-animation-duration;
+}
+
+.footer-slider__icon {
+    position: absolute;
+    opacity: 0;
+    top: -4px;
+    left: 100%;
+    margin-left: -4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: opacity .2s, left $volume-track-slider-animation-duration;
+}
+
+.footer-site__active {
+    
+    .footer-center-icon {
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .footer-center-icon svg {
+        color: #fff;
+    }
+}
+
+.footer-center-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-track-slider {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        .footer-track-slider__icon {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-track-slider__strip {
+    height: 3px;
+    border-radius: 2px;
+    background: #555;
+    position: relative;
+}
+
+.footer-track-slider__strip-full {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #5C74E9;
+    transition: width $track-slider-animation-duration;
+}
+
+.footer-track-slider__icon {
+    position: absolute;
+    opacity: 0;
+    top: -3px;
+    left: 100%;
+    margin-left: -4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: opacity 0.2s, left $track-slider-animation-duration;
+}
+
+
+.footer-center-icon.footer-center-icon--active svg {
+    color: $color-hover;
+}

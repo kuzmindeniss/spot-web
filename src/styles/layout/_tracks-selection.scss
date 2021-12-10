@@ -1,0 +1,126 @@
+.tracks-selection {
+    margin-bottom: 70px;
+}
+
+.tracks-selection a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.5s;
+    line-height: 1;
+}
+
+.tracks-selection .tracks-selection__item-name:hover,
+.tracks-selection .tracks-selection__item-artist:hover {
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.tracks-selection__top {
+    display: grid;
+    grid-auto-flow: column;
+
+}
+
+.tracks-selection__see-all {
+    justify-self: right;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.tracks-selection__title {
+    justify-self: left;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.tracks-selection__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill,minmax(180px,   1fr));
+    grid-column-gap: 32px;
+    overflow: hidden;
+}
+
+.tracks-selection__item {
+    min-width: 180px;
+    display: grid;
+    overflow: hidden;
+    background-color: #1D1D1D;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.tracks-selection__item-img {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2px;
+    padding-bottom: 8px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.tracks-selection__item-img img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s;
+    border-radius: 2px;
+}
+
+.tracks-selection__item-name {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.tracks-selection__item-artist {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+
+.tracks-selection__item:hover .tracks-selection__item-play {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.tracks-selection__item .tracks-selection__item-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 500px;
+    box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+    background-color: #1db954;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all .3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    button {
+        padding: 0;
+        width: 16px;
+        height: 16px;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}

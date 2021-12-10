@@ -1,0 +1,125 @@
+.tracks-table {
+    color: #b3b3b3;
+}
+
+.tracks-table__header {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 2.5;
+    margin-bottom: 16px;
+}
+
+.tracks-table__row {
+    display: grid;
+    grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(120px,1fr);
+    grid-gap: 16px;
+    padding: 0 16px;
+    transition: background-color .2s;
+
+    @include sm {
+        grid-template-columns: [index] 16px [first] 4fr [last] minmax(120px,1fr);
+    }
+}
+
+.tracks-table__row > div {
+    display: flex;
+    align-items: center;
+}
+
+.tracks-table__body .tracks-table__row:hover{
+    background-color: rgba(0, 0, 0, .15);
+    border-radius: 4px;
+
+    .tracks-table__index-button {
+        display: flex;
+        align-content: end;
+        justify-content: flex-end;
+    }
+
+    .tracks-table__index span {
+        display: none;
+    }
+}
+
+.tracks-table__index {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    font-size: 16px;
+}
+
+
+
+.tracks-table__index-button {
+    display: none;
+    padding: 0;
+    transition: color .2s;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.tracks-table__index-button svg {
+    height: 16px;
+    width: 16px;
+}
+
+.tracks-table__track {
+    padding: 4px 0;
+}
+
+.tracks-table__track img {
+    margin-right: 16px;
+}
+
+.tracks-table__track-info-top {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.tracks-table__track-info-bottom {
+    font-weight: 400;
+    line-height: 16px;
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+.tracks-table__year a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s;
+
+    &:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+
+.tracks-table__duration svg {
+    height: 16px;
+    width: 16px;
+    fill: #b3b3b3;
+}
+
+.tracks-table__duration {
+    justify-self: end;
+}
+
+
+
+.tracks-table__row > .tracks-table__year {
+    @include sm {
+        display: none;
+    }
+}
