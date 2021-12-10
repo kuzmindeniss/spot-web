@@ -29,7 +29,7 @@ const SPOTIFY_SCOPES: string[] = [
 
 const CLIENT_ID = "93a39f9a00b84d9aa02f0b5855bedff8";
 const RESPONSE_TYPE = "token";
-const REDIRECT_URI = "https://spot-web-jtqisxumf-kuzmindeniss.vercel.app";
+const REDIRECT_URI = window.location.origin;
 const SPOTIFY_SCOPES_STRING: string = SPOTIFY_SCOPES.join("%20");
 const SHOW_DIALOG = true;
 export const authUrl: string = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=${RESPONSE_TYPE}&redirect_uri=${REDIRECT_URI}&scope=${SPOTIFY_SCOPES_STRING}&show_dialog=${SHOW_DIALOG}`;
