@@ -4,7 +4,7 @@ import { useAuth } from "src/hooks/Auth";
 import { useAppSelector } from "Rdx/hooks";
 import SvgFolder from 'Svgs/folder.svg';
 import SvgRecordVinyl from 'Svgs/record-vinyl.svg';
-import useWindowDimensions from "Utils/useWindowDimensions";
+import useWindowDimensions from "Hooks/windowDimensions";
 import { RootState } from "src/rdx/store";
 
 

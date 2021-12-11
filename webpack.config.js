@@ -24,6 +24,11 @@ module.exports = {
       Providers: path.resolve(__dirname, 'src/providers'),
     }
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   devServer: {
     open: true,
     hot: true,
