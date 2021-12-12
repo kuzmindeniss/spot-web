@@ -61,9 +61,9 @@
         flex: 0.3;
     }
 
-    // @include xsm {
-    //     flex: 0.2;
-    // }
+    @include xsm {
+        flex: 0.2;
+    }
 }
 
 .footer-center-top {
