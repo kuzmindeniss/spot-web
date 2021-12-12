@@ -39,6 +39,12 @@ const Footer = () => {
         )
     };
 
+    if (!trackInfo || !trackInfo.id) return (
+        <footer className="footer-site">
+
+        </footer>
+    );
+
     return (
         <footer className={`footer-site ${isReady ? "footer-site__active" : null}`}>
             {renderTrackInfo()}
